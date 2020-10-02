@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Novo Relógio </h1>
+
+<div mat-dialog-content>
+
+  <form class="form" [formGroup]="relogiosForm">
+    
+    <mat-form-field class="exemple-full-width">
+      <mat-label>Marca</mat-label>
+      <input matInput formControlName="marca" name="marca">
+    </mat-form-field>
+
+    <mat-form-field class="exemple-full-width">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status" name="status">
+        <mat-option value="ATIVO">ATIVO</mat-option>
+        <mat-option value="PENDENTE">PENDENTE</mat-option>
+        <mat-option value="DEFEITO">DEFEITO</mat-option>
+        <mat-option value="BLOQUEADO">BLOQUEADO</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </form>
+
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" (click)="cancelar()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="salvar()">Salvar</button>
+</div>
